@@ -1,0 +1,16 @@
+#apresentacao {
+  background-color: #1A1A41;
+}
+
+#localizacao {
+  background-color: #f2f3f4;
+}
+
+agm-map {
+  height: 500px;
+}
+
+.logo {
+  height: 2vw;
+  margin: 0.5vw;
+}

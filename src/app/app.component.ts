@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'abrindo-portas';
+  lat = -23.186072;
+  lng = -50.657329;
 }
+

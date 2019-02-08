@@ -8,13 +8,17 @@ import {RodapeComponent} from './rodape/rodape.component';
 import {CommonModule} from '@angular/common';
 
 import {AgmCoreModule} from '@agm/core';
+import { HomeComponent } from './home/home.component';
+import { GaleriaComponent } from './galeria/galeria.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CabecalhoComponent,
-    RodapeComponent
+    RodapeComponent,
+    HomeComponent,
+    GaleriaComponent
   ],
   imports: [
     BrowserModule,

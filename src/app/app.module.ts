@@ -10,6 +10,7 @@ import {CommonModule} from '@angular/common';
 import {AgmCoreModule} from '@agm/core';
 import { HomeComponent } from './home/home.component';
 import { GaleriaComponent } from './galeria/galeria.component';
+import { ContatoComponent } from './contato/contato.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { GaleriaComponent } from './galeria/galeria.component';
     CabecalhoComponent,
     RodapeComponent,
     HomeComponent,
-    GaleriaComponent
+    GaleriaComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,

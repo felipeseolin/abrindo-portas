@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import * as bulmaCarousel from '../../../node_modules/bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js';
 
 @Component({
@@ -9,11 +9,16 @@ import * as bulmaCarousel from '../../../node_modules/bulma-extensions/bulma-car
 export class SobreNosComponent implements OnInit {
 
   protected carousels;
+  protected showText = true;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     this.carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
   }
 
+  hideText() {
+    this.showText = false;
+  }
 }

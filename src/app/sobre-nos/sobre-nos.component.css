@@ -1,8 +1,14 @@
-h1 {
-  padding: 2vw;
-  border: 2px solid black;
-}
-
 p {
   text-indent: 6vw;
+  padding-bottom: 10px;
+}
+
+#titulo-sobre-nos {
+  color: white;
+  padding: 4vw;
+  border: 2px solid white;
+}
+
+.titulo {
+  padding: 2vw;
 }

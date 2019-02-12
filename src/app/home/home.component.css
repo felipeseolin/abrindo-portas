@@ -1,3 +1,12 @@
+agm-map {
+  height: 500px;
+}
+
+.logo {
+  height: 2vw;
+  margin: 0.5vw;
+}
+
 #apresentacao {
   background-color: #1A1A41;
 }
@@ -8,13 +17,4 @@
 
 #info {
   padding: 5vw;
-}
-
-agm-map {
-  height: 500px;
-}
-
-.logo {
-  height: 2vw;
-  margin: 0.5vw;
 }

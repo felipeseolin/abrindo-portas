@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as bulmaCarousel from '../../../node_modules/bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js';
 
 @Component({
   selector: 'app-sobre-nos',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SobreNosComponent implements OnInit {
 
+  protected carousels;
+
   constructor() { }
 
   ngOnInit() {
+    this.carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
   }
 
 }

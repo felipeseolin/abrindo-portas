@@ -8,8 +8,8 @@ import * as bulmaCarousel from '../../../node_modules/bulma-extensions/bulma-car
 })
 export class SobreNosComponent implements OnInit {
 
-  protected carousels;
-  protected showText = true;
+  public carousels;
+  public showText = true;
 
   constructor() {
   }

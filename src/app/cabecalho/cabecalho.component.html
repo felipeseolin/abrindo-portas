@@ -4,24 +4,21 @@
        routerLink="/"
        routerLinkActive="active">
       <img src="assets/imgs/escudo.png" alt="Abrindo Portas">
+      <span id="titulo">Abrindo Portas</span>
     </a>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" (click)="showMenu()"
+      [class.is-active]="hideMenu ? '' : 'is-active'">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="navbar" class="navbar-menu">
+  <div id="navbar" class="navbar-menu" (click)="showMenu()"
+       [class.is-active]="hideMenu ? '' : 'is-active'">
     <div class="navbar-start">
 
-      <a class="navbar-item"
-         routerLink="/"
-         routerLinkActive="active"
-      >
-        Início
-      </a>
       <a class="navbar-item"
          routerLink="/galeria"
          routerLinkActive="active"

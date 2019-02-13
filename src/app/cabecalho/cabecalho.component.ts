@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabecalhoComponent implements OnInit {
 
+  public hideMenu = true;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  public showMenu() {
+    this.hideMenu = !this.hideMenu;
+  }
 }

@@ -1,10 +1,11 @@
-agm-map {
-  height: 500px;
+.logo {
+  max-height: 32px;
+  margin: 8px;
 }
 
-.logo {
-  height: 2vw;
-  margin: 0.5vw;
+.introducao {
+  text-align: justify;
+  font-size: 20px;
 }
 
 #apresentacao {
@@ -17,4 +18,8 @@ agm-map {
 
 #info {
   padding: 5vw;
+}
+
+#titulo-inicio {
+  font-size: 45px;
 }

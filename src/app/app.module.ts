@@ -29,7 +29,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     AppRoutingModule,
     CommonModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDR3imI68l5LF6nxdN3rkfGJPfayN1zT8s'
+      apiKey: '',
     })
   ],
   providers: [],

@@ -9,7 +9,6 @@ import {CommonModule} from '@angular/common';
 
 import {AgmCoreModule} from '@agm/core';
 import { HomeComponent } from './home/home.component';
-import { GaleriaComponent } from './galeria/galeria.component';
 import { ContatoComponent } from './contato/contato.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
@@ -20,7 +19,6 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     CabecalhoComponent,
     RodapeComponent,
     HomeComponent,
-    GaleriaComponent,
     ContatoComponent,
     SobreNosComponent
   ],

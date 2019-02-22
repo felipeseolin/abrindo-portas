@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  teste() {
+    console.log('oloco');
+  }
+
 }

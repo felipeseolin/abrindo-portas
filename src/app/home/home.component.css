@@ -23,3 +23,21 @@
 #titulo-inicio {
   font-size: 45px;
 }
+
+.mapouter {
+  text-align: right;
+  width: 100%;
+  height: 75%;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}

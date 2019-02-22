@@ -61,9 +61,7 @@
         Fale conosco
       </h1>
       <h2 class="subtitle">Mande-nos uma mensagem</h2>
-      <!--<agm-map [latitude]="lat" [longitude]="lng">-->
-      <!--<agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>-->
-      <!--</agm-map>-->
+
       <div class="columns">
         <div class="column is-7">
           <!-- Nome -->
@@ -122,6 +120,16 @@
         </div>
         <div class="column">
           <h2 class="subtitle">Localização</h2>
+
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe id="gmap_canvas"
+                      src="https://maps.google.com/maps?q=UTFPR%20Corn%C3%A9lio%20Proc%C3%B3pio&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                      frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+              </iframe>
+            </div>
+          </div>
+
           <h2 class="subtitle">Você também pode trocar uma ideia por aqui</h2>
           <a href="" target="_blank">
             <img class="logo" src="assets/imgs/email.png" alt="Email">

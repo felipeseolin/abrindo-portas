@@ -17,4 +17,9 @@ export class CabecalhoComponent implements OnInit {
   public showMenu() {
     this.hideMenu = !this.hideMenu;
   }
+
+  public scrool(id) {
+   const el = document.getElementById(id);
+   el.scrollIntoView({behavior: 'smooth'});
+  }
 }

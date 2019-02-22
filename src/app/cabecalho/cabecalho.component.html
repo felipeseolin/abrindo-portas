@@ -20,17 +20,18 @@
     <div class="navbar-start">
 
       <a class="navbar-item"
-         routerLink="/nos"
-         routerLinkActive="active"
-      >
+         (click)="scrool('sobre-nos')">
         Sobre nós
       </a>
-      <!--<a class="navbar-item"-->
-         <!--routerLink="/contato"-->
-         <!--routerLinkActive="active"-->
-      <!--&gt;-->
-        <!--Contato-->
-      <!--</a>-->
+
+      <a class="navbar-item"
+         (click)="scrool('fale-conosco')">
+        Fale conosco
+      </a>
+
+      <a class="navbar-item" (click)="scrool('redes-sociais')">
+        Redes Sociais
+      </a>
 
     </div>
 

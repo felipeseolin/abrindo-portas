@@ -1,10 +1,61 @@
-<footer class="footer">
+<footer class="footer is-fixed-bottom">
+  <!-- Indice-->
   <div class="container">
-    <h3 class="title">Abrindo Portas</h3>
+    <div class="columns">
+      <!-- Início -->
+      <div class="column">
+        <h2 class="subtitle" (click)="scrool('apresentacao')">
+          <a>Início</a>
+        </h2>
+        <p (click)="scrool('info')">
+          <a>Informações</a>
+        </p>
+      </div>
+      <!-- Sobre nós -->
+      <div class="column">
+        <h2 class="subtitle" (click)="scrool('sobre-nos')">
+          <a>Sobre nós</a>
+        </h2>
+        <p>
+          <a href="/nos">Saiba ainda mais sobre nós</a>
+        </p>
+      </div>
+      <!-- Fale Conosco -->
+      <div class="column">
+        <h2 class="subtitle" (click)="scrool('fale-conosco')">
+          <a>Fale conosco</a>
+        </h2>
+        <p (click)="scrool('formulario')">
+          <a>Envie uma mensagem</a>
+        </p>
+        <p (click)="scrool('localizacao')">
+          <a>Localização</a>
+        </p>
+        <p (click)="scrool('outras-formas-comunicacao')">
+          <a>Outras formas de comunicação</a>
+        </p>
+      </div>
+      <!-- Redes Sociais -->
+      <div class="column">
+        <h2 class="subtitle" (click)="scrool('redes-sociais')">
+          <a>Redes sociais</a>
+        </h2>
+        <p (click)="scrool('redes-sociais')">
+          <a>Facebook</a>
+        </p>
+        <p (click)="scrool('redes-sociais')">
+          <a>Instagram</a>
+        </p>
+        <p (click)="scrool('redes-sociais')">
+          <a>Email</a>
+        </p>
+      </div>
+    </div>
   </div>
+
   <div class="container">
-    <div>Avenida Alberto Carazzai, 1640 - Centro</div>
-    <div>Cornélio Procópio - Paraná, 86300-000</div>
+    <h3 class="title">
+      <a class="not-active">Abrindo Portas</a>
+    </h3>
   </div>
-  <hr style="margin: 0 0 3rem;">
 </footer>

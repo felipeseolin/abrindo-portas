@@ -12,4 +12,9 @@ export class RodapeComponent implements OnInit {
   ngOnInit() {
   }
 
+  public scrool(id) {
+    const el = document.getElementById(id);
+    el.scrollIntoView({behavior: 'smooth'});
+  }
+
 }

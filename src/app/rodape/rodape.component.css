@@ -1,3 +1,7 @@
+#abrindo-portas {
+  margin-top: 25px;
+}
+
 .title a {
   text-decoration: none;
   color: #4c4c4c;
@@ -26,4 +30,20 @@ p a {
 p a:hover {
   text-decoration: none;
   color: dimgray;
+}
+
+.logo {
+  filter: brightness(0) saturate(100%) invert(25%) sepia(21%) saturate(0%) hue-rotate(146deg) brightness(99%) contrast(86%);
+  max-height: 32px;
+  margin-right: 8px;
+}
+
+.logo:hover {
+  filter: unset;
+  max-height: 34px;
+  margin-right: 8px;
+}
+
+#web:hover {
+  filter: invert(21%) sepia(10%) saturate(5734%) hue-rotate(190deg) brightness(87%) contrast(116%);
 }

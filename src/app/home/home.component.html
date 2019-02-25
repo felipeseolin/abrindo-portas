@@ -90,51 +90,57 @@
         <div class="column is-6">
           <!-- Nome -->
           <div class="field">
-            <label class="label">Name</label>
+            <label class="label">Nome *</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-danger" type="text" placeholder="Monteiro Lobato">
+              <input class="input" type="text" placeholder="Monteiro Lobato"
+                     [ngClass]="fieldNameInvalid ? 'is-danger' : ''" (blur)="fieldTouched('name')">
               <span class="icon is-small is-left">
             <i class="ion ion-ios-person"></i>
           </span>
               <span class="icon is-small is-right">
-            <i class="ion ion-ios-warning"></i>
+            <i class="ion"
+             [ngClass]="fieldNameInvalid ? 'ion-ios-warning' : ''"></i>
           </span>
             </div>
-            <p class="help is-danger">Nome inválido</p>
+            <p class="help is-danger" *ngIf="fieldNameInvalid">Nome inválido</p>
           </div>
           <!-- Email -->
           <div class="field">
-            <label class="label">Email</label>
+            <label class="label">E-mail *</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-danger" type="email" placeholder="me@mail.com">
+              <input class="input" type="email" placeholder="me@mail.com"
+                     [ngClass]="fieldEmailInvalid ? 'is-danger' : ''" (blur)="fieldTouched('email')">
               <span class="icon is-small is-left">
             <i class="ion ion-ios-mail"></i>
           </span>
               <span class="icon is-small is-right">
-            <i class="ion ion-ios-warning"></i>
+            <i class="ion" [ngClass]="fieldNameInvalid ? 'ion-ios-warning' : ''"></i>
           </span>
             </div>
-            <p class="help is-danger">This email is invalid</p>
+            <p class="help is-danger" *ngIf="fieldEmailInvalid">This email is invalid</p>
           </div>
           <!-- Assunto -->
           <div class="field">
-            <label class="label">Assunto</label>
+            <label class="label">Assunto *</label>
             <div class="control has-icons-right">
-              <input class="input is-danger" type="text" placeholder="Monteiro Lobato">
+              <input class="input" type="text" placeholder="Matrículas"
+                     [ngClass]="fieldSubjectInvalid ? 'is-danger' : ''" (blur)="fieldTouched('subject')">
               <span class="icon is-small is-right">
-            <i class="ion ion-ios-warning"></i>
+            <i class="ion" [ngClass]="fieldNameInvalid ? 'ion-ios-warning' : ''"></i>
           </span>
             </div>
-            <p class="help is-danger">Nome inválido</p>
+            <p class="help is-danger" *ngIf="fieldSubjectInvalid">Nome inválido</p>
           </div>
           <!-- Mensagem -->
           <div class="field">
-            <label class="label">Mesagem</label>
+            <label class="label">Mensagem *</label>
             <div class="control">
-              <textarea class="textarea is-danger" placeholder="Digite sua mensagem aqui"></textarea>
+              <textarea class="textarea" placeholder="Preciso de informações sobre a matrícula deste ano"
+                        [ngClass]="fieldMessageInvalid ? 'is-danger' : ''" (blur)="fieldTouched('message')"></textarea>
             </div>
-            <p class="help is-danger">Mensagem inválida</p>
+            <p class="help is-danger" *ngIf="fieldMessageInvalid">Mensagem inválida</p>
           </div>
+          <p>* Atributo obrigatório</p>
           <!-- Botões -->
           <div class="field is-grouped is-grouped-right">
             <div class="control">

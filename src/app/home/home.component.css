@@ -42,3 +42,7 @@ iframe {
 #web {
   filter: invert(21%) sepia(10%) saturate(5734%) hue-rotate(190deg) brightness(87%) contrast(116%);
 }
+
+.bottom {
+  margin-top: 20vw;
+}

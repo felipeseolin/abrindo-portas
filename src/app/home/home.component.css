@@ -1,8 +1,3 @@
-.logo {
-  max-height: 32px;
-  margin: 8px;
-}
-
 .introducao {
   text-align: justify;
   font-size: 20px;
@@ -23,7 +18,7 @@
 .mapouter {
   text-align: right;
   width: 100%;
-  height: 65%;
+  height: 72%;
   padding-bottom: 16px;
 }
 
@@ -39,10 +34,22 @@ iframe {
   height: 100%;
 }
 
-#web {
-  filter: invert(21%) sepia(10%) saturate(5734%) hue-rotate(190deg) brightness(87%) contrast(116%);
-}
-
 .bottom {
   margin-top: 20vw;
+}
+
+.logo {
+  filter: brightness(0) saturate(100%) invert(25%) sepia(21%) saturate(0%) hue-rotate(146deg) brightness(99%) contrast(86%);
+  max-height: 32px;
+  margin-right: 8px;
+}
+
+.logo:hover {
+  filter: unset;
+  max-height: 34px;
+  margin-right: 8px;
+}
+
+#web:hover {
+  filter: invert(21%) sepia(10%) saturate(5734%) hue-rotate(190deg) brightness(87%) contrast(116%);
 }

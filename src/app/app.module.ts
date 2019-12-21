@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {CabecalhoComponent} from './cabecalho/cabecalho.component';
-import {RodapeComponent} from './rodape/rodape.component';
+import {FooterComponent} from './footer/footer.component';
 import {CommonModule} from '@angular/common';
 
 import {AgmCoreModule} from '@agm/core';
@@ -16,7 +16,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
   declarations: [
     AppComponent,
     CabecalhoComponent,
-    RodapeComponent,
+    FooterComponent,
     HomeComponent,
     SobreNosComponent
   ],

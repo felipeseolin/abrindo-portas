@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-rodape',
-  templateUrl: './rodape.component.html',
-  styleUrls: ['./rodape.component.css']
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css']
 })
-export class RodapeComponent implements OnInit {
+export class FooterComponent implements OnInit {
 
   constructor() { }
 

@@ -3,22 +3,19 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {CabecalhoComponent} from './cabecalho/cabecalho.component';
-import {FooterComponent} from './footer/footer.component';
+import {NavbarComponent} from './core/navbar/navbar.component';
+import {FooterComponent} from './core/footer/footer.component';
 import {CommonModule} from '@angular/common';
 
 import {AgmCoreModule} from '@agm/core';
-import { HomeComponent } from './home/home.component';
-import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
-
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CabecalhoComponent,
+    NavbarComponent,
     FooterComponent,
-    HomeComponent,
-    SobreNosComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

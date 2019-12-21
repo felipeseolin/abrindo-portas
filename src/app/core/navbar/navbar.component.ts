@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-cabecalho',
-  templateUrl: './cabecalho.component.html',
-  styleUrls: ['./cabecalho.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class CabecalhoComponent implements OnInit {
+export class NavbarComponent implements OnInit {
 
   public hideMenu = true;
 

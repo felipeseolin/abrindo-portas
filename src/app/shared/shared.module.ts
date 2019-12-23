@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [CounterComponent],
+  exports: [
+    CounterComponent
+  ],
   imports: [
     CommonModule
   ]

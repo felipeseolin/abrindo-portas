@@ -9,6 +9,7 @@ import {CommonModule} from '@angular/common';
 
 import {AgmCoreModule} from '@agm/core';
 import { HomeComponent } from './pages/home/home.component';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './pages/home/home.component';
     CommonModule,
     AgmCoreModule.forRoot({
       apiKey: '',
-    })
+    }),
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

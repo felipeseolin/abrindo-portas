@@ -85,10 +85,10 @@
 <section id="fale-conosco" class="hero is-white">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
+      <h2 class="title">
         Fale conosco
-      </h1>
-      <h2 id="formulario" class="subtitle">Mande-nos uma mensagem</h2>
+      </h2>
+      <h3 id="formulario" class="subtitle">Mande-nos uma mensagem</h3>
       <!-- Formulário -->
       <div class="columns">
         <div class="column is-6">
@@ -104,41 +104,23 @@
           <!-- Mensagem -->
           <app-textarea label="Mensagem"
                         placeholder="Preciso de informações sobre a matrícula deste ano"></app-textarea>
-          <p>* Atributo obrigatório</p>
           <!-- Botões -->
-          <app-button title="Teste"></app-button>
-
           <div class="field is-grouped is-grouped-right">
             <div class="control">
-              <a class="button is-link">
-                <span>Enviar</span>
-                <span class="icon">
-                  <i class="ion ion-ios-send"></i>
-                </span>
-              </a>
+              <app-button title="Teste" icon="ion-ios-send" classes="is-link"></app-button>
             </div>
           </div>
         </div>
         <!-- Localização -->
         <div class="column">
           <h2 id="localizacao" class="subtitle">Localização</h2>
-
           <div class="mapouter">
             <div class="gmap_canvas">
               <iframe id="gmap_canvas"
-                      src="https://maps.google.com/maps?q=UTFPR%20Corn%C3%A9lio%20Proc%C3%B3pio&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                      frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                      src="https://maps.google.com/maps?q=UTFPR%20Corn%C3%A9lio%20Proc%C3%B3pio&t=&z=17&ie=UTF8&iwloc=&output=embed">
               </iframe>
             </div>
           </div>
-          <!-- Outras formas de comunicação -->
-          <h2 id="outras-formas-comunicacao" class="subtitle">Você também pode trocar uma ideia por aqui</h2>
-          <a href="" target="_blank">
-            <img class="logo" src="assets/imgs/email.png" alt="Email">
-          </a>
-          <a href="https://m.me/abrindoportascp" target="_blank">
-            <img class="logo" src="assets/imgs/messenger.png" alt="Messenger">
-          </a>
         </div>
       </div>
     </div>

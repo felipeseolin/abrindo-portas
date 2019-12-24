@@ -14,6 +14,11 @@ import { InputComponent } from './input/input.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    NavbarComponent,
+    FooterComponent,
+    InputComponent,
   ]
 })
 export class CoreModule { }

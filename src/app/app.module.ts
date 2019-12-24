@@ -3,20 +3,16 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {NavbarComponent} from './core/navbar/navbar.component';
-import {FooterComponent} from './core/footer/footer.component';
 import {CommonModule} from '@angular/common';
 
 import {AgmCoreModule} from '@agm/core';
-import { HomeComponent } from './pages/home/home.component';
 import {SharedModule} from './shared/shared.module';
+import {PagesModule} from './pages/pages.module';
+import {CoreModule} from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +21,9 @@ import {SharedModule} from './shared/shared.module';
     AgmCoreModule.forRoot({
       apiKey: '',
     }),
-    SharedModule
+    SharedModule,
+    PagesModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

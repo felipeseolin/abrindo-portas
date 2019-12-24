@@ -93,51 +93,14 @@
       <div class="columns">
         <div class="column is-6">
           <!-- Nome -->
-          <div class="field">
-            <label class="label">Nome *</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="input" type="text" placeholder="Monteiro Lobato"
-                     [ngClass]="fieldNameInvalid ? 'is-danger' : ''" (blur)="fieldTouched('name')">
-              <span class="icon is-small is-left">
-                <i class="ion ion-ios-person"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="ion"
-                   [ngClass]="fieldNameInvalid ? 'ion-ios-warning' : ''"></i>
-              </span>
-            </div>
-            <p class="help is-danger" *ngIf="fieldNameInvalid">Nome inválido</p>
-          </div>
+          <app-input id="name" name="name" label="Nome" iconLeft="ion ion-md-person"
+                     placeholder="Meu Nome Completo"></app-input>
           <!-- Email -->
-          <div class="field">
-            <label class="label">E-mail *</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="input" type="email" placeholder="me@mail.com"
-                     [ngClass]="fieldEmailInvalid ? 'is-danger' : ''" (blur)="fieldTouched('email')">
-              <span class="icon is-small is-left">
-                <i class="ion ion-ios-mail"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="ion" [ngClass]="fieldNameInvalid ? 'ion-ios-warning' : ''"></i>
-              </span>
-            </div>
-            <p class="help is-danger" *ngIf="fieldEmailInvalid">This email is invalid</p>
-          </div>
+          <app-input id="email" name="email" label="E-mail" type="email" iconLeft="ion ion-md-mail"
+                     placeholder="meu.email@email.com"></app-input>
           <!-- Assunto -->
-          <div class="field">
-            <label class="label">Assunto *</label>
-            <div class="control has-icons-right has-icons-left">
-              <input class="input" type="text" placeholder="Matrículas"
-                     [ngClass]="fieldSubjectInvalid ? 'is-danger' : ''" (blur)="fieldTouched('subject')">
-              <span class="icon is-small is-left">
-                <i class="ion ion-ios-at"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="ion" [ngClass]="fieldNameInvalid ? 'ion-ios-warning' : ''"></i>
-              </span>
-            </div>
-            <p class="help is-danger" *ngIf="fieldSubjectInvalid">Nome inválido</p>
-          </div>
+          <app-input id="subject" name="subject" label="Assunto" placeholder="O assunto da mensagem"
+                     iconLeft="ion ion-md-create"></app-input>
           <!-- Mensagem -->
           <div class="field">
             <label class="label">Mensagem *</label>
@@ -191,7 +154,8 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">Redes Sociais</h1>
-      <h2 class="subtitle">Acompanhe-nos em nossas redes sociais e fique por dentro de todas as novidades do projeto!</h2>
+      <h2 class="subtitle">Acompanhe-nos em nossas redes sociais e fique por dentro de todas as novidades do
+        projeto!</h2>
       <a href="https://facebook.com/abrindoportascp" target="_blank">
         <img class="logo" src="assets/imgs/facebook.png" alt="Facebook">
       </a>

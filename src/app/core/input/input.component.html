@@ -1,15 +1,14 @@
 <div class="field">
-  <p [class.isControl]="isControl" [class.has-icons-left]="iconLeft" [class.has-icons-right]="iconRight">
-    <label>
-      {{ this.label }}
-      <input class="input {{color}} {{size}}" [type]="type" [placeholder]="placeholder" [required]="isRequired"
-             [disabled]="isDisabled" [readOnly]="isReadOnly">
-    </label>
+  <label class="label" [htmlFor]="id">{{ this.label }}</label>
+  <div [class.control]="isControl" [class.has-icons-left]="iconLeft" [class.has-icons-right]="iconRight">
+    <input [id]="id" [name]="name" class="input {{color}} {{size}}" [type]="type" [placeholder]="placeholder"
+           [required]="isRequired"
+           [disabled]="isDisabled" [readOnly]="isReadOnly">
     <span class="icon is-small is-left">
       <i [class]="iconLeft"></i>
     </span>
     <span class="icon is-small is-right">
       <i [class]="iconRight"></i>
     </span>
-  </p>
+  </div>
 </div>

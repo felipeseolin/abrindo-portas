@@ -7,6 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
+  @Input() id;
+  @Input() name;
   @Input() isControl = true;
   @Input() isRequired = true;
   @Input() isDisabled = false;

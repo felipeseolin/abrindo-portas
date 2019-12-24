@@ -4,6 +4,7 @@ import {FooterComponent} from './footer/footer.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import { InputComponent } from './input/input.component';
 import { TextareaComponent } from './textarea/textarea.component';
+import { ButtonComponent } from './button/button.component';
 
 
 
@@ -13,6 +14,7 @@ import { TextareaComponent } from './textarea/textarea.component';
     NavbarComponent,
     InputComponent,
     TextareaComponent,
+    ButtonComponent,
   ],
   imports: [
     CommonModule

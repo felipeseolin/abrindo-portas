@@ -9,6 +9,8 @@ export class ButtonComponent implements OnInit {
 
   @Input() title: string;
   @Input() type = 'submit';
+  @Input() icon = '';
+  @Input() classes = '';
   @Input() disabled = false;
 
   constructor() {

@@ -24,6 +24,7 @@ import { ButtonComponent } from './button/button.component';
     FooterComponent,
     InputComponent,
     TextareaComponent,
+    ButtonComponent,
   ]
 })
 export class CoreModule { }

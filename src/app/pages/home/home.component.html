@@ -102,14 +102,8 @@
           <app-input id="subject" name="subject" label="Assunto" placeholder="O assunto da mensagem"
                      iconLeft="ion ion-md-create"></app-input>
           <!-- Mensagem -->
-          <div class="field">
-            <label class="label">Mensagem *</label>
-            <div class="control">
-              <textarea class="textarea" placeholder="Preciso de informações sobre a matrícula deste ano"
-                        [ngClass]="fieldMessageInvalid ? 'is-danger' : ''" (blur)="fieldTouched('message')"></textarea>
-            </div>
-            <p class="help is-danger" *ngIf="fieldMessageInvalid">Mensagem inválida</p>
-          </div>
+          <app-textarea label="Mensagem"
+                        placeholder="Preciso de informações sobre a matrícula deste ano"></app-textarea>
           <p>* Atributo obrigatório</p>
           <!-- Botões -->
           <div class="field is-grouped is-grouped-right">

@@ -93,16 +93,20 @@
       <div class="columns">
         <div class="column is-6">
           <!-- Nome -->
-          <app-input id="name" name="name" label="Nome" iconLeft="ion ion-md-person"
+          <app-input id="name" name="name" label="Nome" icon="ion ion-md-person"
+                     [validation]="nameInputValidation"
                      placeholder="Meu Nome Completo"></app-input>
           <!-- Email -->
-          <app-input id="email" name="email" label="E-mail" type="email" iconLeft="ion ion-md-mail"
+          <app-input id="email" name="email" label="E-mail" type="email" icon="ion ion-md-mail"
+                     [validation]="emailInputValidation"
                      placeholder="meu.email@email.com"></app-input>
           <!-- Assunto -->
           <app-input id="subject" name="subject" label="Assunto" placeholder="O assunto da mensagem"
-                     iconLeft="ion ion-md-create"></app-input>
+                     [validation]="subjectInputValidation"
+                     icon="ion ion-md-create"></app-input>
           <!-- Mensagem -->
-          <app-textarea label="Mensagem"
+          <app-textarea id="message" name="message" label="Mensagem"
+                        [validation]="messageInputValidation"
                         placeholder="Preciso de informações sobre a matrícula deste ano"></app-textarea>
           <!-- Botões -->
           <div class="field is-grouped is-grouped-right">

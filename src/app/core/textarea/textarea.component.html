@@ -1,6 +1,14 @@
 <div class="field">
   <label class="label">{{ label }}</label>
   <div [class.control]="isControl">
-      <textarea class="textarea" [placeholder]="placeholder"></textarea>
+    <textarea [id]="id"
+              [name]="name"
+              class="textarea"
+              [class.is-danger]="isInvalid"
+              [placeholder]="placeholder"
+              [(ngModel)]="value"
+              (focusout)="inputFocusOut()"
+    ></textarea>
+    <small *ngIf="isInvalid" class="has-text-danger">{{ errorMessage }}</small>
   </div>
 </div>

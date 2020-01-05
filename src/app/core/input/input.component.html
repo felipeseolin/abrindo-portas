@@ -1,14 +1,26 @@
 <div class="field">
   <label class="label" [htmlFor]="id">{{ this.label }}</label>
-  <div [class.control]="isControl" [class.has-icons-left]="iconLeft" [class.has-icons-right]="iconRight">
-    <input [id]="id" [name]="name" class="input {{color}} {{size}}" [type]="type" [placeholder]="placeholder"
+  <div class="has-icons-right" [class.control]="isControl" [class.has-icons-left]="icon">
+    <input [id]="id" [name]="name"
+           class="input {{color}} {{size}}"
+           [class.is-danger]="isInvalid"
+           [type]="type"
+           [placeholder]="placeholder"
            [required]="isRequired"
-           [disabled]="isDisabled" [readOnly]="isReadOnly">
-    <span class="icon is-small is-left">
-      <i [class]="iconLeft"></i>
+           [disabled]="isDisabled"
+           [readOnly]="isReadOnly"
+           (focusout)="inputFocusOut()"
+           [(ngModel)]="value"
+    >
+    <span class="icon is-small is-left" [class.has-text-danger]="isInvalid">
+      <i [class]="icon"></i>
     </span>
-    <span class="icon is-small is-right">
-      <i [class]="iconRight"></i>
+    <span class="icon is-small is-right" [class.has-text-danger]="isInvalid">
+      <i class="ion"
+         [class.ion-md-close]="isInvalid"
+         [class.ion-md-checkmark]="!isInvalid && isFilled"
+      ></i>
     </span>
+    <small *ngIf="isInvalid" class="has-text-danger">{{ errorMessage }}</small>
   </div>
 </div>

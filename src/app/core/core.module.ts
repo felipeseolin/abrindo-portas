@@ -5,6 +5,7 @@ import {NavbarComponent} from './navbar/navbar.component';
 import { InputComponent } from './input/input.component';
 import { TextareaComponent } from './textarea/textarea.component';
 import { ButtonComponent } from './button/button.component';
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -16,9 +17,10 @@ import { ButtonComponent } from './button/button.component';
     TextareaComponent,
     ButtonComponent,
   ],
-  imports: [
-    CommonModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule
+    ],
   exports: [
     NavbarComponent,
     FooterComponent,

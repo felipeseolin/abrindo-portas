@@ -6,6 +6,7 @@ import { InputComponent } from './input/input.component';
 import { TextareaComponent } from './textarea/textarea.component';
 import { ButtonComponent } from './button/button.component';
 import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
 
 
@@ -19,7 +20,8 @@ import {FormsModule} from '@angular/forms';
   ],
     imports: [
         CommonModule,
-        FormsModule
+        FormsModule,
+        RouterModule
     ],
   exports: [
     NavbarComponent,

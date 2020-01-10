@@ -7,6 +7,7 @@ import {CoreModule} from '../core/core.module';
 import { OurHistoryComponent } from './our-history/our-history.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
     OurHistoryComponent,
     NotFoundComponent,
     ContactComponent,
+    AboutComponent,
   ],
   imports: [
     CommonModule,

@@ -18,19 +18,28 @@
   <div id="navbar" class="navbar-menu" (click)="showMenu()"
        [class.is-active]="hideMenu ? '' : 'is-active'">
     <div class="navbar-start">
-
+      <a class="navbar-item" routerLink="/about">
+        Sobre
+      </a>
       <a class="navbar-item" routerLink="/history">
         Nossa história
       </a>
-
       <a class="navbar-item" routerLink="/contact">
         Fale conosco
       </a>
-
-      <a class="navbar-item">
-        Inscrições
-      </a>
-
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Inscrições
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            Turmas Abertas
+          </a>
+          <a class="navbar-item">
+            Processo Seletivo
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="navbar-end">

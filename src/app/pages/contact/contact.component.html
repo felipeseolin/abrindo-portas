@@ -1,1 +1,68 @@
-<p>contact works!</p>
+<section id="contact" class="section">
+  <div class="container">
+    <h1 class="title">Fale conosco</h1>
+    <p class="subtitle">Mande-nos uma mensagem!</p>
+
+    <!-- Formulário -->
+    <div class="columns">
+      <div class="column is-6">
+        <form action="https://getform.io/f/9529c189-7670-4b06-ac0a-bbd4311f72c4" method="post">
+          <!-- Nome -->
+          <app-input id="name" name="name" label="Nome" icon="ion ion-md-person"
+                     [validation]="nameInputValidation"
+                     placeholder="Meu Nome Completo"></app-input>
+          <!-- Email -->
+          <app-input id="email" name="email" label="E-mail" type="email" icon="ion ion-md-mail"
+                     [validation]="emailInputValidation"
+                     placeholder="meu.email@email.com"></app-input>
+          <!-- Telefone -->
+          <app-input id="phone" name="phone" label="Telefone" type="number" icon="ion ion-md-call"
+                     placeholder="(43) 99999-9999" mask="(00:00:00)" [isRequired]="false"></app-input>
+          <!-- Assunto -->
+          <app-input id="subject" name="subject" label="Assunto" placeholder="O assunto da mensagem"
+                     [validation]="subjectInputValidation"
+                     icon="ion ion-md-create"></app-input>
+          <!-- Mensagem -->
+          <app-textarea id="message" name="message" label="Mensagem"
+                        [validation]="messageInputValidation"
+                        placeholder="Preciso de informações sobre a matrícula deste ano"></app-textarea>
+          <!-- Botões -->
+          <div class="field is-grouped is-grouped-right">
+            <div class="control">
+              <app-button title="Enviar" icon="ion-ios-send" classes="is-link"></app-button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Localização -->
+      <div class="column">
+        <h2 id="localizacao" class="subtitle">Localização</h2>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=UTFPR%20Corn%C3%A9lio%20Proc%C3%B3pio&t=&z=17&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="send-email" class="section">
+  <div></div>
+</section>
+
+<section id="social-media" class="hero is-info">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Redes Sociais
+      </h1>
+      <h2 class="subtitle">
+        Também é possível falar conosco em nossas redes sociais
+      </h2>
+      <app-social-media color="#fff"></app-social-media>
+    </div>
+  </div>
+</section>

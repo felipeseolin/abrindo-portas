@@ -1,3 +1,15 @@
 .field {
   margin-bottom: 8px;
 }
+
+/* Hide Input [type-number] snippers */
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+/* Chrome (like) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

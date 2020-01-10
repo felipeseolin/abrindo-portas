@@ -1,14 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 import { CounterComponent } from './counter/counter.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
-  declarations: [CounterComponent],
+  declarations: [
+    CounterComponent,
+    SocialMediaComponent
+  ],
   exports: [
-    CounterComponent
+    CounterComponent,
+    SocialMediaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    AngularSvgIconModule
   ]
 })
 export class SharedModule { }

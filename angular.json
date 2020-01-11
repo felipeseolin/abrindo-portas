@@ -26,7 +26,7 @@
               "./node_modules/bulma/css/bulma.css",
               "node_modules/bulma-extensions/bulma-carousel/dist/css/bulma-carousel.min.css",
               "node_modules/ionicons/dist/scss/ionicons.scss",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [
               "./node_modules/bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js"
@@ -84,7 +84,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -136,5 +136,10 @@
       }
     }
   },
-  "defaultProject": "abrindo-portas"
+  "defaultProject": "abrindo-portas",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

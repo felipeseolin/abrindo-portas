@@ -25,6 +25,7 @@
             "styles": [
               "./node_modules/bulma/css/bulma.css",
               "node_modules/bulma-extensions/bulma-carousel/dist/css/bulma-carousel.min.css",
+              "node_modules/bulma-extensions/bulma-timeline/dist/css/bulma-timeline.min.css",
               "node_modules/ionicons/dist/scss/ionicons.scss",
               "src/styles.scss"
             ],

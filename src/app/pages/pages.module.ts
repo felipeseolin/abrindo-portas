@@ -8,6 +8,7 @@ import { OurHistoryComponent } from './our-history/our-history.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { MembersComponent } from './members/members.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AboutComponent } from './about/about.component';
     NotFoundComponent,
     ContactComponent,
     AboutComponent,
+    MembersComponent,
   ],
   imports: [
     CommonModule,

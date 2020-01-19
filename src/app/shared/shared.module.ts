@@ -4,17 +4,20 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { CounterComponent } from './counter/counter.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
 import {HttpClientModule} from '@angular/common/http';
+import { MemberComponent } from './member/member.component';
 
 
 @NgModule({
   declarations: [
     CounterComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    MemberComponent
   ],
-  exports: [
-    CounterComponent,
-    SocialMediaComponent
-  ],
+    exports: [
+        CounterComponent,
+        SocialMediaComponent,
+        MemberComponent
+    ],
   imports: [
     CommonModule,
     HttpClientModule,

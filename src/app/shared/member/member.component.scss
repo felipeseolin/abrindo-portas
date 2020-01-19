@@ -1,0 +1,13 @@
+.picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 8px;
+
+  &.inactive {
+    filter: grayscale(100%);
+  }
+}

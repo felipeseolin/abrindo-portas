@@ -9,6 +9,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { MembersComponent } from './members/members.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MembersComponent } from './members/members.component';
     ContactComponent,
     AboutComponent,
     MembersComponent,
+    GalleryComponent,
   ],
   imports: [
     CommonModule,

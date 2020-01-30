@@ -1,0 +1,14 @@
+<div #presentation id="presentation">
+  <div id="close-container" title="Fechar" (click)="closePresentation()">
+    <span class="ion ion-md-close"></span>
+  </div>
+  <div id="presentation-image">
+    <span #iconPrevius id="iconPrevius" class="ion ion-ios-arrow-back icon-enabled" title="Imagem Anterior"
+          (click)="previusImage()"
+    ></span>
+    <img [src]="currentImg.src" [alt]="currentImg.alt">
+    <span #iconNext id="iconNext" class="ion ion-ios-arrow-forward icon-enabled" title="Próxima Imagem"
+          (click)="nextImage()"
+    ></span>
+  </div>
+</div>

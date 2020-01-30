@@ -1,0 +1,51 @@
+#presentation {
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 35;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  #close-container {
+    width: 100%;
+    text-align: right;
+    padding-right: 24px;
+    cursor: pointer;
+    span {
+      font-size: 2rem;
+      color: white;
+      background-color: inherit;
+    }
+  }
+
+  #presentation-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .ion {
+      font-size: 4rem;
+      background-color: inherit;
+    }
+
+    span {
+      padding: 0 24px;
+    }
+
+    img {
+      max-height: 90vh;
+      max-width: 70vw;
+    }
+  }
+}
+
+.icon-enabled {
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,17 @@
+.image-from-gallery {
+  margin: 4px;
+  min-height: 250px;
+  max-height: 250px;
+  min-width: 300px;
+  max-width: 300px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    filter: grayscale(100%);
+    cursor: pointer;
+  }
+}

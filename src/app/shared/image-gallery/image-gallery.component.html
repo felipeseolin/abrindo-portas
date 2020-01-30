@@ -1,0 +1,14 @@
+<ul class="columns is-multiline">
+  <li *ngFor="let img of images; let i = index" class="column image-from-gallery"
+      [style.background-image]="'url(\''+ img.src +'\')'"
+      (click)="seeImage(img, i)"
+  ></li>
+</ul>
+
+<app-gallery-presentation
+  *ngIf="showPresentation"
+  [images]="images"
+  [currentImgIndex]="currentIndex"
+  [currentImg]="currentImage"
+  (showPresentation)="showPresentation = $event"
+></app-gallery-presentation>

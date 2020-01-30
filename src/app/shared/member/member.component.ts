@@ -12,7 +12,7 @@ export class MemberComponent implements OnInit {
   @Input() mainPhoto: string;
   @Input() hoverPhoto: string;
   @Input() isInactive = false;
-  private photo: string;
+  public photo: string;
 
   constructor() { }
 
@@ -20,7 +20,7 @@ export class MemberComponent implements OnInit {
     this.photo = this.mainPhoto;
   }
 
-  private changePhoto() {
+  public changePhoto() {
     this.photo = this.mainPhoto === this.photo ? this.hoverPhoto : this.mainPhoto;
   }
 

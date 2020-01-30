@@ -1,4 +1,5 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2, ViewChild, HostListener} from '@angular/core';
+import {GalleryImage} from '../models/gallery-image';
 
 export enum KEY_CODE {
   RIGHT_ARROW = 'ArrowRight',
@@ -12,8 +13,8 @@ export enum KEY_CODE {
   styleUrls: ['./gallery-presentation.component.scss']
 })
 export class GalleryPresentationComponent implements OnInit {
-  @Input() images: Array<Object>;
-  @Input() currentImg: Object;
+  @Input() images: Array<GalleryImage>;
+  @Input() currentImg: GalleryImage;
   @Input() currentImgIndex: number;
   @Output() showPresentation = new EventEmitter<boolean>();
   @ViewChild('presentation', {static: true}) presentation: ElementRef;
@@ -45,11 +46,11 @@ export class GalleryPresentationComponent implements OnInit {
     }
   }
 
-  private closePresentation() {
+  public closePresentation() {
     this.showPresentation.emit(false);
   }
 
-  private nextImage() {
+  public nextImage() {
     if (this.currentImgIndex + 1 < this.images.length) {
       this.currentImgIndex++;
       this.currentImg = this.images[this.currentImgIndex];
@@ -57,7 +58,7 @@ export class GalleryPresentationComponent implements OnInit {
     this.checkFirstOrLastImage();
   }
 
-  private previusImage() {
+  public previusImage() {
     if (this.currentImgIndex > 0) {
       this.currentImgIndex--;
       this.currentImg = this.images[this.currentImgIndex];
@@ -65,7 +66,7 @@ export class GalleryPresentationComponent implements OnInit {
     this.checkFirstOrLastImage();
   }
 
-  private checkFirstOrLastImage() {
+  public checkFirstOrLastImage() {
     // Verify if it is the first image, so disable the previus button
     if (this.currentImgIndex <= 0) {
       this.disableButton(this.iconPrevius.nativeElement);
@@ -80,11 +81,11 @@ export class GalleryPresentationComponent implements OnInit {
     }
   }
 
-  private disableButton(element: ElementRef) {
+  public disableButton(element: ElementRef) {
     this.renderer.removeClass(element, 'icon-enabled');
   }
 
-  private enableButton(element: ElementRef) {
+  public enableButton(element: ElementRef) {
     this.renderer.addClass(element, 'icon-enabled');
   }
 }

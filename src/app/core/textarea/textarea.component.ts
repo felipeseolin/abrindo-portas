@@ -22,7 +22,7 @@ export class TextareaComponent implements OnInit {
   @Input() iconRight = '';
   @Input() iconLeft = '';
   private errorMessage: string;
-  private isInvalid = false;
+  public isInvalid = false;
   private isFilled = false;
 
   constructor() {

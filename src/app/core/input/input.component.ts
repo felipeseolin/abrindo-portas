@@ -22,8 +22,8 @@ export class InputComponent implements OnInit {
   @Input() size = '';
   @Input() icon = '';
   private errorMessage: string;
-  private isInvalid = false;
-  private isFilled = false;
+  public isInvalid = false;
+  public isFilled = false;
 
   constructor() { }
 

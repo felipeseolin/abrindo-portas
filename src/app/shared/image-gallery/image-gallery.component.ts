@@ -1,4 +1,5 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {GalleryImage} from '../models/gallery-image';
 
 @Component({
   selector: 'app-image-gallery',
@@ -6,10 +7,10 @@ import {Component, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./image-gallery.component.scss']
 })
 export class ImageGalleryComponent implements OnInit {
-  @Input() images: Array<Object>;
-  private currentImage = {};
+  @Input() images: Array<GalleryImage>;
+  private currentImage: GalleryImage;
   private currentIndex = 0;
-  private showPresentation = false;
+  public showPresentation = false;
 
   constructor() { }
 

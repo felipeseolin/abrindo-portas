@@ -1,26 +1,37 @@
-<div class="field">
-  <label class="label" [htmlFor]="id">{{ this.label }}</label>
+<div class="field" [formGroup]="form">
+  <label class="label"
+         [class.has-text-success]="formSubmitted && !formControl(name).errors"
+         [class.has-text-danger]="formSubmitted && formControl(name).errors"
+         [htmlFor]="id">
+    {{ label }}
+    <small *ngIf="!isRequired" class="has-text-grey">(Opcional)</small>
+  </label>
   <div class="has-icons-right" [class.control]="isControl" [class.has-icons-left]="icon">
     <input [id]="id" [name]="name"
-           class="input {{color}} {{size}}"
-           [class.is-danger]="isInvalid"
+           class="input {{size}}"
+           [class.is-success]="formSubmitted && !  formControl(name).errors"
+           [class.is-danger]="formSubmitted && formControl(name).errors"
            [type]="type"
            [placeholder]="placeholder"
            [required]="isRequired"
-           [disabled]="isDisabled"
            [readOnly]="isReadOnly"
-           (focusout)="inputFocusOut()"
-           [(ngModel)]="value"
+           [formControlName]="name"
     >
-    <span class="icon is-small is-left" [class.has-text-danger]="isInvalid">
+    <span class="icon is-small is-left"
+          [class.has-text-danger]="formSubmitted && formControl(name).errors"
+          [class.has-text-success]="formSubmitted && !formControl(name).errors"
+    >
       <i [class]="icon"></i>
     </span>
-    <span class="icon is-small is-right" [class.has-text-danger]="isInvalid">
+    <span class="icon is-small is-right"
+          [class.has-text-danger]="formSubmitted && formControl(name).errors"
+          [class.has-text-success]="formSubmitted && !formControl(name).errors"
+    >
       <i class="ion"
-         [class.ion-md-close]="isInvalid"
-         [class.ion-md-checkmark]="!isInvalid && isFilled"
+         [class.ion-md-close]="formSubmitted && formControl(name).errors"
+         [class.ion-md-checkmark]="formSubmitted && !formControl(name).errors"
       ></i>
     </span>
-    <small *ngIf="isInvalid" class="has-text-danger">{{ errorMessage }}</small>
+    <ng-content></ng-content>
   </div>
 </div>

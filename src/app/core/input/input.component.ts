@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -7,37 +8,28 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
-  @Input() id;
-  @Input() name;
-  @Input() validation: Function;
-  @Input() value = '';
+  @Input() id: string;
+  @Input() name: string;
+  @Input() form: FormGroup;
+  @Input() value: string;
+  @Input() label: string;
+  @Input() placeholder: string;
+  @Input() size: string;
+  @Input() icon: string;
+  @Input() type = 'text';
+  @Input() formSubmitted = false;
   @Input() isControl = true;
   @Input() isRequired = true;
   @Input() isDisabled = false;
   @Input() isReadOnly = false;
-  @Input() type = 'text';
-  @Input() label = '';
-  @Input() placeholder = '';
-  @Input() color = '';
-  @Input() size = '';
-  @Input() icon = '';
-  private errorMessage: string;
-  public isInvalid = false;
-  public isFilled = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  inputFocusOut() {
-    this.validateInput();
-  }
-
-  validateInput() {
-    this.isFilled = !!this.value.length;
-    this.errorMessage = this.validation(this.value);
-    this.isInvalid = !!(this.isFilled && this.errorMessage);
+  formControl(name) {
+    return this.form.get(name);
   }
 
 }

@@ -32,7 +32,6 @@ export class GalleryPresentationComponent implements OnInit {
 
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    console.log(event.code);
     switch (event.code) {
       case KEY_CODE.RIGHT_ARROW:
         this.nextImage();

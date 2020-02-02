@@ -1,14 +1,23 @@
-<div class="field">
-  <label class="label">{{ label }}</label>
+<div class="field" [formGroup]="form">
+  <label class="label"
+         [class.has-text-success]="formSubmitted && !formControl(name).errors"
+         [class.has-text-danger]="formSubmitted && formControl(name).errors"
+    [htmlFor]="id"
+  >
+    {{ label }}
+    <small *ngIf="!isRequired" class="has-text-grey">(Opcional)</small>
+  </label>
   <div [class.control]="isControl">
     <textarea [id]="id"
               [name]="name"
-              class="textarea"
-              [class.is-danger]="isInvalid"
+              class="textarea {{size}}"
+              [class.is-success]="formSubmitted && !  formControl(name).errors"
+              [class.is-danger]="formSubmitted && formControl(name).errors"
               [placeholder]="placeholder"
-              [(ngModel)]="value"
-              (focusout)="inputFocusOut()"
+              [required]="isRequired"
+              [readOnly]="isReadOnly"
+              [formControlName]="name"
     ></textarea>
-    <small *ngIf="isInvalid" class="has-text-danger">{{ errorMessage }}</small>
+    <ng-content></ng-content>
   </div>
 </div>

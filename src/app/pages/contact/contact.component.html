@@ -6,33 +6,79 @@
     <!-- Formulário -->
     <div class="columns">
       <div class="column is-6">
-        <form action="https://getform.io/f/9529c189-7670-4b06-ac0a-bbd4311f72c4" method="post">
+        <app-form [formName]="formMessage" [onSubmit]="submitFormMessage">
           <!-- Nome -->
           <app-input id="name" name="name" label="Nome" icon="ion ion-md-person"
-                     [validation]="nameInputValidation"
-                     placeholder="Meu Nome Completo"></app-input>
+                     [form]="formMessage" placeholder="Meu Nome Completo" [formSubmitted]="formMessageSubmitted">
+            <div *ngIf="(formMessageControl.name.dirty || formMessageSubmitted) && formMessageControl.name.errors"
+                 class="errors"
+                 [class.has-text-danger]="(formMessageControl.name.dirty || formMessageSubmitted) && formMessageControl.name.errors"
+            >
+              <small *ngIf="formMessageControl.name.errors?.required">O campo nome é obrigatório</small>
+              <small *ngIf="formMessageControl.name.errors?.empty">O campo nome deve ser preenchido corretamente</small>
+              <small *ngIf="formMessageControl.name.errors?.minlength">Escreva o seu nome completo</small>
+              <small *ngIf="formMessageControl.name.errors?.maxlength">Utiliza menos de 50 caracteres</small>
+              <small *ngIf="formMessageControl.name.errors?.pattern">Nome inválido</small>
+            </div>
+          </app-input>
           <!-- Email -->
           <app-input id="email" name="email" label="E-mail" type="email" icon="ion ion-md-mail"
-                     [validation]="emailInputValidation"
-                     placeholder="meu.email@email.com"></app-input>
+                     [form]="formMessage" placeholder="meu.email@email.com" [formSubmitted]="formMessageSubmitted">
+            <div *ngIf="(formMessageControl.email.dirty || formMessageSubmitted) && formMessageControl.email.errors"
+                 class="errors"
+                 [class.has-text-danger]="(formMessageControl.email.dirty || formMessageSubmitted) && formMessageControl.email.errors"
+            >
+              <small *ngIf="formMessageControl.email.errors?.required">O campo e-mail é obrigatório</small>
+              <small *ngIf="formMessageControl.email.errors?.empty">O campo e-mail é obrigatório corretamente</small>
+              <small *ngIf="formMessageControl.email.errors?.nullvalidator">O campo e-mail deve ser preenchido</small>
+              <small *ngIf="formMessageControl.email.errors?.email">E-mail inválido</small>
+            </div>
+          </app-input>
           <!-- Telefone -->
           <app-input id="phone" name="phone" label="Telefone" type="number" icon="ion ion-md-call"
-                     placeholder="(43) 99999-9999" mask="(00:00:00)" [isRequired]="false"></app-input>
+                     placeholder="(43) 99999-9999" [form]="formMessage" [isRequired]="false" [formSubmitted]="formMessageSubmitted">
+            <div *ngIf="(formMessageControl.phone.dirty || formMessageSubmitted) && formMessageControl.phone.errors"
+                 class="errors"
+                 [class.has-text-danger]="(formMessageControl.phone.dirty || formMessageSubmitted) && formMessageControl.phone.errors"
+            >
+              <small *ngIf="formMessageControl.phone.errors?.empty">O campo telefone deve ser preenchido corretamente</small>
+            </div>
+          </app-input>
           <!-- Assunto -->
           <app-input id="subject" name="subject" label="Assunto" placeholder="O assunto da mensagem"
-                     [validation]="subjectInputValidation"
-                     icon="ion ion-md-create"></app-input>
+                     [form]="formMessage" icon="ion ion-md-create" [formSubmitted]="formMessageSubmitted">
+            <div *ngIf="(formMessageControl.subject.dirty || formMessageSubmitted) && formMessageControl.subject.errors"
+                 class="errors"
+                 [class.has-text-danger]="(formMessageControl.subject.dirty || formMessageSubmitted) && formMessageControl.subject.errors"
+            >
+              <small *ngIf="formMessageControl.subject.errors?.required">O campo assunto é obrigatório</small>
+              <small *ngIf="formMessageControl.subject.errors?.empty">O campo assunto deve ser preenchido corretamente</small>
+              <small *ngIf="formMessageControl.subject.errors?.minlength">O campo assunto deve possuir ao menos 5 caracteres</small>
+              <small *ngIf="formMessageControl.subject.errors?.maxlength">O campo assunto deve possuir ao máximo 100 caracteres</small>
+            </div>
+          </app-input>
           <!-- Mensagem -->
-          <app-textarea id="message" name="message" label="Mensagem"
-                        [validation]="messageInputValidation"
-                        placeholder="Preciso de informações sobre a matrícula deste ano"></app-textarea>
+          <app-textarea id="message" name="message" label="Mensagem" [formSubmitted]="formMessageSubmitted"
+                        [form]="formMessage" placeholder="Preciso de informações sobre a matrícula deste ano">
+            <div *ngIf="(formMessageControl.message.dirty || formMessageSubmitted) && formMessageControl.message.errors"
+                 class="errors"
+                 [class.has-text-danger]="(formMessageControl.message.dirty || formMessageSubmitted) && formMessageControl.message.errors"
+            >
+              <small *ngIf="formMessageControl.message.errors?.required">O campo mensagem é obrigatório</small>
+              <small *ngIf="formMessageControl.message.errors?.empty">O campo mensagem deve ser preenchido corretamente</small>
+              <small *ngIf="formMessageControl.message.errors?.minlength">O campo mensagem deve possuir ao menos 10 caracteres</small>
+              <small *ngIf="formMessageControl.message.errors?.maxlength">O campo mensagem deve possuir ao máximo 500 caracteres</small>
+            </div>
+          </app-textarea>
           <!-- Botões -->
           <div class="field is-grouped is-grouped-right">
             <div class="control">
-              <app-button title="Enviar" icon="ion-ios-send" classes="is-link"></app-button>
+              <app-button title="Enviar" icon="ion-ios-send" classes="is-link"
+                          [disabled]="false"
+              ></app-button>
             </div>
           </div>
-        </form>
+        </app-form>
       </div>
       <!-- Localização -->
       <div class="column">

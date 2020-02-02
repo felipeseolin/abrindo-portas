@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-textarea',
@@ -7,23 +8,18 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class TextareaComponent implements OnInit {
 
-  @Input() id;
-  @Input() name;
-  @Input() validation: Function;
-  @Input() value = '';
+  @Input() id: string;
+  @Input() name: string;
+  @Input() form: FormGroup;
+  @Input() value: string;
+  @Input() label: string;
+  @Input() placeholder: string;
+  @Input() size: string;
+  @Input() formSubmitted = false;
   @Input() isControl = true;
   @Input() isRequired = true;
   @Input() isDisabled = false;
   @Input() isReadOnly = false;
-  @Input() label = '';
-  @Input() placeholder = '';
-  @Input() color = '';
-  @Input() size = '';
-  @Input() iconRight = '';
-  @Input() iconLeft = '';
-  private errorMessage: string;
-  public isInvalid = false;
-  private isFilled = false;
 
   constructor() {
   }
@@ -31,14 +27,8 @@ export class TextareaComponent implements OnInit {
   ngOnInit() {
   }
 
-  inputFocusOut() {
-    this.validateInput();
-  }
-
-  validateInput() {
-    this.isFilled = !!this.value.length;
-    this.errorMessage = this.validation(this.value);
-    this.isInvalid = !!(this.isFilled && this.errorMessage);
+  formControl(name) {
+    return this.form.get(name);
   }
 
 }

@@ -9,6 +9,7 @@ import {AgmCoreModule} from '@agm/core';
 import {SharedModule} from './shared/shared.module';
 import {PagesModule} from './pages/pages.module';
 import {CoreModule} from './core/core.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,8 @@ import {CoreModule} from './core/core.module';
     SharedModule,
     PagesModule,
     CoreModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

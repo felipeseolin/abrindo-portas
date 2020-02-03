@@ -12,6 +12,7 @@ export class ButtonComponent implements OnInit {
   @Input() icon = '';
   @Input() classes = '';
   @Input() disabled = false;
+  @Input() isLoading = false;
 
   constructor() {
   }

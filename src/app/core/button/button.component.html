@@ -1,4 +1,4 @@
-<button class="button {{classes}}" [type]="type" [disabled]="disabled">
+<button class="button {{classes}}" [class.is-loading]="isLoading" [type]="type" [disabled]="disabled">
   <span *ngIf="icon" class="icon">
       <i [class]="icon"></i>
     </span>

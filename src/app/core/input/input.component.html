@@ -1,6 +1,6 @@
 <div class="field" [formGroup]="form">
   <label class="label"
-         [class.has-text-success]="formSubmitted && !formControl(name).errors"
+         [class.has-text-success]="isRequired && formSubmitted && !formControl(name).errors"
          [class.has-text-danger]="formSubmitted && formControl(name).errors"
          [htmlFor]="id">
     {{ label }}
@@ -9,7 +9,7 @@
   <div class="has-icons-right" [class.control]="isControl" [class.has-icons-left]="icon">
     <input [id]="id" [name]="name"
            class="input {{size}}"
-           [class.is-success]="formSubmitted && !  formControl(name).errors"
+           [class.is-success]="formSubmitted && !formControl(name).errors"
            [class.is-danger]="formSubmitted && formControl(name).errors"
            [type]="type"
            [placeholder]="placeholder"
@@ -19,13 +19,13 @@
     >
     <span class="icon is-small is-left"
           [class.has-text-danger]="formSubmitted && formControl(name).errors"
-          [class.has-text-success]="formSubmitted && !formControl(name).errors"
+          [class.has-text-success]="isRequired && formSubmitted && !formControl(name).errors"
     >
       <i [class]="icon"></i>
     </span>
     <span class="icon is-small is-right"
           [class.has-text-danger]="formSubmitted && formControl(name).errors"
-          [class.has-text-success]="formSubmitted && !formControl(name).errors"
+          [class.has-text-success]="isRequired && formSubmitted && !formControl(name).errors"
     >
       <i class="ion"
          [class.ion-md-close]="formSubmitted && formControl(name).errors"

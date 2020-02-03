@@ -1,8 +1,8 @@
 <div class="field" [formGroup]="form">
   <label class="label"
-         [class.has-text-success]="formSubmitted && !formControl(name).errors"
+         [class.has-text-success]="isRequired && formSubmitted && !formControl(name).errors"
          [class.has-text-danger]="formSubmitted && formControl(name).errors"
-    [htmlFor]="id"
+         [htmlFor]="id"
   >
     {{ label }}
     <small *ngIf="!isRequired" class="has-text-grey">(Opcional)</small>
@@ -11,7 +11,7 @@
     <textarea [id]="id"
               [name]="name"
               class="textarea {{size}}"
-              [class.is-success]="formSubmitted && !  formControl(name).errors"
+              [class.is-success]="formSubmitted && !formControl(name).errors"
               [class.is-danger]="formSubmitted && formControl(name).errors"
               [placeholder]="placeholder"
               [required]="isRequired"

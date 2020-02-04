@@ -3,12 +3,15 @@
     <span class="ion ion-md-close"></span>
   </div>
   <div id="presentation-image">
-    <span #iconPrevius id="iconPrevius" class="ion ion-ios-arrow-back icon-enabled" title="Imagem Anterior"
-          (click)="previusImage()"
-    ></span>
+    <div id="close-presentation" (click)="closePresentation()"></div>
+    <div class="change-image full-height all-center" (click)="previusImage()">
+      <span #iconPrevius id="iconPrevius" class="ion ion-ios-arrow-back icon-enabled" title="Imagem Anterior"
+      ></span>
+    </div>
     <img [src]="currentImg.src" [alt]="currentImg.alt">
-    <span #iconNext id="iconNext" class="ion ion-ios-arrow-forward icon-enabled" title="Próxima Imagem"
-          (click)="nextImage()"
-    ></span>
+    <div class="change-image full-height all-center" (click)="nextImage()">
+      <span #iconNext id="iconNext" class="ion ion-ios-arrow-forward icon-enabled" title="Próxima Imagem"
+      ></span>
+    </div>
   </div>
 </div>

@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   overflow: hidden;
-
+  // Display
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -17,6 +17,8 @@
     text-align: right;
     padding-right: 24px;
     cursor: pointer;
+    z-index: 40;
+    // Close Icon
     span {
       font-size: 2rem;
       color: white;
@@ -29,18 +31,25 @@
     justify-content: space-between;
     align-items: center;
 
+    // Icons arrow left and right
     .ion {
       font-size: 4rem;
       background-color: inherit;
     }
 
-    span {
-      padding: 0 24px;
+    // Arrow left and right
+    .change-image {
+      z-index: 40;
+      cursor: pointer;
+      span {
+        padding: 0 24px;
+      }
     }
 
     img {
       max-height: 90vh;
       max-width: 70vw;
+      z-index: 40;
     }
   }
 }
@@ -48,4 +57,26 @@
 .icon-enabled {
   color: white;
   cursor: pointer;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+#close-presentation {
+  z-index: 35;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ContactMessage} from '../../shared/models/contact-message';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-
+import {HttpClient} from '@angular/common/http';
 import {emptyValidator} from '../../validators/empty.validator';
 
 @Component({
@@ -13,12 +13,36 @@ export class ContactComponent implements OnInit {
 
   public formMessage: FormGroup = this.createForm(new ContactMessage());
   public formMessageSubmitted = false;
+  public sendingMessage = false;
+  public showMessageFormNotification = '';
+  private formMessageAction = 'https://formspree.io/xnqpgvrb';
 
   submitFormMessage = () => {
     this.formMessageSubmitted = true;
+    if (!this.formMessage.valid) {
+      return;
+    }
+    this.sendingMessage = true;
+    this.http.post(this.formMessageAction, this.formMessage.value).subscribe(
+      (reponse) => {
+        this.formMessageSubmitted = false;
+        this.sendingMessage = false;
+        this.showMessageFormNotification = 'success';
+        this.scrollTo('contact');
+        this.formMessage.reset();
+      },
+      (error) => {
+        this.showMessageFormNotification = 'danger';
+        this.sendingMessage = false;
+        this.scrollTo('contact');
+      }
+    );
   }
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
+  ) {
   }
 
   ngOnInit() {
@@ -74,6 +98,18 @@ export class ContactComponent implements OnInit {
 
   get formMessageControl() {
     return this.formMessage.controls;
+  }
+
+  closeNotification() {
+    this.showMessageFormNotification = '';
+  }
+
+  scrollTo(id: string) {
+    document.getElementById(id).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
   }
 
 }

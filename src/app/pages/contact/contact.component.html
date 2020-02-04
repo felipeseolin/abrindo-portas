@@ -6,6 +6,18 @@
     <!-- Formulário -->
     <div class="columns">
       <div class="column is-6">
+        <div id="messageNotification">
+          <div *ngIf="showMessageFormNotification == 'success'" class="notification is-success">
+            <button class="delete" (click)="closeNotification()"></button>
+            Sua mensagem foi enviada com sucesso!
+          </div>
+          <div *ngIf="showMessageFormNotification == 'danger'" class="notification is-danger">
+            <button class="delete" (click)="closeNotification()"></button>
+            Ocorreu um erro e sua mensagem não pode ser enviada. Mas
+            você pode entrar em contato através do nosso e-mail ou
+            nas redes sociais, veja <a (click)="scrollTo('social-media')">aqui</a>
+          </div>
+        </div>
         <app-form [formName]="formMessage" [onSubmit]="submitFormMessage">
           <!-- Nome -->
           <app-input id="name" name="name" label="Nome" icon="ion ion-md-person"
@@ -73,9 +85,7 @@
           <!-- Botões -->
           <div class="field is-grouped is-grouped-right">
             <div class="control">
-              <app-button title="Enviar" icon="ion-ios-send" classes="is-link"
-                          [disabled]="false"
-              ></app-button>
+              <app-button title="Enviar" icon="ion-ios-send" classes="is-link" [isLoading]="sendingMessage"></app-button>
             </div>
           </div>
         </app-form>

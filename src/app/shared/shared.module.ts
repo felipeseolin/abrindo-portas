@@ -7,6 +7,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { MemberComponent } from './member/member.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { GalleryPresentationComponent } from './gallery-presentation/gallery-presentation.component';
+import { AccordionComponent } from './accordion/accordion.component';
 
 
 @NgModule({
@@ -15,14 +16,16 @@ import { GalleryPresentationComponent } from './gallery-presentation/gallery-pre
     SocialMediaComponent,
     MemberComponent,
     ImageGalleryComponent,
-    GalleryPresentationComponent
+    GalleryPresentationComponent,
+    AccordionComponent
   ],
-  exports: [
-    CounterComponent,
-    SocialMediaComponent,
-    MemberComponent,
-    ImageGalleryComponent
-  ],
+    exports: [
+        CounterComponent,
+        SocialMediaComponent,
+        MemberComponent,
+        ImageGalleryComponent,
+        AccordionComponent
+    ],
   imports: [
     CommonModule,
     HttpClientModule,

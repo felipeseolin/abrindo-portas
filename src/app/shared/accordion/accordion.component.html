@@ -1,0 +1,17 @@
+<div class="column accordion">
+  <div class="accordion-header" (click)="showHideContent()">
+    <h4 class="title is-4 has-text-primary">
+      <span class="subtitle has-text-primary">
+        {{ number }}
+      </span>
+      {{ header }}
+      <span class="is-pulled-right">
+        <span class="ion" [class.ion-ios-arrow-back]="isHidden"
+              [class.ion-ios-arrow-down]="!isHidden"></span>
+      </span>
+    </h4>
+  </div>
+  <p class="has-text-justified" [class.is-hidden]="isHidden">
+    <ng-content></ng-content>
+  </p>
+</div>

@@ -1,0 +1,23 @@
+import {Component, Input, OnInit} from '@angular/core';
+
+@Component({
+  selector: 'app-accordion',
+  templateUrl: './accordion.component.html',
+  styleUrls: ['./accordion.component.scss']
+})
+export class AccordionComponent implements OnInit {
+
+  @Input() number: string;
+  @Input() header: string;
+  public isHidden = true;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  showHideContent() {
+    this.isHidden = !this.isHidden;
+  }
+
+}

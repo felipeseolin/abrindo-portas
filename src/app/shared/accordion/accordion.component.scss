@@ -1,0 +1,15 @@
+.accordion {
+  background-color: inherit;
+  border: #00b89c solid 1px;
+  margin: 8px 0;
+  p {
+    margin: 8px 0;
+  }
+}
+
+.accordion-header {
+  cursor: pointer;
+  h4 {
+    margin: 0;
+  }
+}

@@ -7,6 +7,7 @@ import {ContactComponent} from './pages/contact/contact.component';
 import {AboutComponent} from './pages/about/about.component';
 import {MembersComponent} from './pages/members/members.component';
 import {GalleryComponent} from './pages/gallery/gallery.component';
+import {ClassesComponent} from './pages/classes/classes.component';
 
 const routes: Routes = [
   { path: 'history', component: OurHistoryComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'members', component: MembersComponent },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'classes', component: ClassesComponent },
   { path: '', component: HomeComponent, pathMatch: 'full'},
   { path: '**', component: NotFoundComponent }
 ];

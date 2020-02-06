@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { MembersComponent } from './members/members.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ClassesComponent } from './classes/classes.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     MembersComponent,
     GalleryComponent,
+    ClassesComponent,
   ],
   imports: [
     CommonModule,

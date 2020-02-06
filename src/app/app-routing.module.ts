@@ -8,6 +8,7 @@ import {AboutComponent} from './pages/about/about.component';
 import {MembersComponent} from './pages/members/members.component';
 import {GalleryComponent} from './pages/gallery/gallery.component';
 import {ClassesComponent} from './pages/classes/classes.component';
+import {JoinUsComponent} from './pages/join-us/join-us.component';
 
 const routes: Routes = [
   { path: 'history', component: OurHistoryComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'members', component: MembersComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'classes', component: ClassesComponent },
+  { path: 'join-us', component: JoinUsComponent },
   { path: '', component: HomeComponent, pathMatch: 'full'},
   { path: '**', component: NotFoundComponent }
 ];

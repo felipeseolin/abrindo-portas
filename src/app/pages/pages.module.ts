@@ -12,6 +12,7 @@ import { MembersComponent } from './members/members.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClassesComponent } from './classes/classes.component';
+import { JoinUsComponent } from './join-us/join-us.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ClassesComponent } from './classes/classes.component';
     MembersComponent,
     GalleryComponent,
     ClassesComponent,
+    JoinUsComponent,
   ],
   imports: [
     CommonModule,

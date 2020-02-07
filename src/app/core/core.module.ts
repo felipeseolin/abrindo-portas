@@ -9,6 +9,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {SharedModule} from '../shared/shared.module';
 import { FormComponent } from './form/form.component';
+import { TabGroupComponent } from './tab-group/tab-group.component';
+import { TabComponent } from './tab/tab.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { FormComponent } from './form/form.component';
     TextareaComponent,
     ButtonComponent,
     FormComponent,
+    TabGroupComponent,
+    TabComponent,
   ],
   imports: [
     CommonModule,
@@ -26,13 +30,15 @@ import { FormComponent } from './form/form.component';
     SharedModule,
     ReactiveFormsModule
   ],
-    exports: [
-        NavbarComponent,
-        FooterComponent,
-        InputComponent,
-        TextareaComponent,
-        ButtonComponent,
-        FormComponent,
-    ]
+  exports: [
+    NavbarComponent,
+    FooterComponent,
+    InputComponent,
+    TextareaComponent,
+    ButtonComponent,
+    FormComponent,
+    TabGroupComponent,
+    TabComponent,
+  ]
 })
 export class CoreModule { }

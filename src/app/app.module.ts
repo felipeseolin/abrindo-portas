@@ -5,7 +5,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
 
-import {AgmCoreModule} from '@agm/core';
 import {SharedModule} from './shared/shared.module';
 import {PagesModule} from './pages/pages.module';
 import {CoreModule} from './core/core.module';
@@ -19,9 +18,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    AgmCoreModule.forRoot({
-      apiKey: '',
-    }),
     SharedModule,
     PagesModule,
     CoreModule,

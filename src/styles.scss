@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bulma";
+@import "~bulma-extensions/bulma-carousel/src/sass";
+@import "~bulma-extensions/bulma-timeline/src/sass";
+$ionicons-font-path: "~ionicons/dist/fonts";
+@import "~ionicons/dist/scss/ionicons.scss";
 
 .errors {
   small {

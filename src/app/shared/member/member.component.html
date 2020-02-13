@@ -1,11 +1,11 @@
 <div class="column is-narrow is-centered is-center is-grouped-centered has-text-centered">
-  <div class="picture" [class.inactive]="isInactive" [style.background-image]="'url(\''+ photo +'\')'"
+  <div class="picture" [class.inactive]="member.isInactive" [style.background-image]="'url(\''+ photo +'\')'"
        (mouseover)="changePhoto()" (mouseleave)="changePhoto()"
   ></div>
   <p class="is-uppercase has-text-weight-semibold">
-    {{ name }}
+    {{ member.name }}
   </p>
-  <p *ngFor="let sector of sectors">
+  <p *ngFor="let sector of member.sectors">
     {{ sector }}
   </p>
 </div>

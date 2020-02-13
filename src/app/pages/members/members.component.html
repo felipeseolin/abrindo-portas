@@ -1,43 +1,26 @@
 <section id="members" class="section">
   <div class="container">
-    <h1 class="title">Membros</h1>
-    <p class="subtitle">Conheça cada um dos porteiros!</p>
+    <h1 class="title">Membros Atuais</h1>
+    <p class="subtitle">Conheça cada um dos porteiros e porteiras!</p>
   </div>
 
   <div class="container">
     <div class="columns is-multiline is-mobile is-centered">
-      <app-member name="Felipe Seolin Bento"
-                  mainPhoto="assets/imgs/members/Felipe.jpg"
-                  hoverPhoto="assets/imgs/members/Felipe.jpg"
-                  [sectors]="['Marketing']"></app-member>
-      <app-member name="Felipe Seolin Bento"
-                  mainPhoto="assets/imgs/members/Felipe.jpg"
-                  hoverPhoto="assets/imgs/members/Felipe.jpg"
-                  [sectors]="['Marketing']"></app-member>
-      <app-member name="Felipe Seolin Bento"
-                  mainPhoto="assets/imgs/members/Felipe.jpg"
-                  hoverPhoto="assets/imgs/members/Felipe.jpg"
-                  [sectors]="['Marketing']"></app-member>
-      <app-member name="Felipe Seolin Bento"
-                  mainPhoto="assets/imgs/members/Felipe.jpg"
-                  hoverPhoto="assets/imgs/members/Felipe.jpg"
-                  [sectors]="['Marketing']"></app-member>
-      <app-member name="Felipe Seolin Bento"
-                  mainPhoto="assets/imgs/members/Felipe.jpg"
-                  hoverPhoto="assets/imgs/members/Felipe.jpg"
-                  [sectors]="['Marketing']"></app-member>
-      <app-member name="Felipe Seolin Bento"
-                  mainPhoto="assets/imgs/members/Felipe.jpg"
-                  hoverPhoto="assets/imgs/members/Felipe.jpg"
-                  [sectors]="['Marketing']"></app-member>
-      <app-member name="Felipe Seolin Bento"
-                  mainPhoto="assets/imgs/members/Felipe.jpg"
-                  hoverPhoto="assets/imgs/members/Felipe.jpg"
-                  [sectors]="['Marketing']"></app-member>
-      <app-member name="Felipe Seolin Bento"
-                  mainPhoto="assets/imgs/members/Felipe.jpg"
-                  hoverPhoto="assets/imgs/members/Felipe.jpg"
-                  [sectors]="['Marketing']"></app-member>
+      <app-member *ngFor="let member of activeMembers" [member]="member"></app-member>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 class="title">Membros Antigos</h1>
+    <p class="subtitle">
+      Estes ex-porteiros e ex-porteiras colaboraram muito com o crescimento do projeto, porém hoje
+      já não estão mais. A todos, o nosso muito obrigado!
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="columns is-multiline is-mobile is-centered">
+      <app-member *ngFor="let member of inactiveMembers" [member]="member"></app-member>
     </div>
   </div>
 </section>

@@ -1,5 +1,3 @@
-import validate = WebAssembly.validate;
-
 export class GalleryImage {
   private _src: string;
   private _alt: string;

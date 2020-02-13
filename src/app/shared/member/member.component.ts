@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Member} from '../models/member';
 
 @Component({
   selector: 'app-member',
@@ -7,21 +8,17 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class MemberComponent implements OnInit {
 
-  @Input() name: string;
-  @Input() sectors: Array<string>;
-  @Input() mainPhoto: string;
-  @Input() hoverPhoto: string;
-  @Input() isInactive = false;
+  @Input() member: Member;
   public photo: string;
 
   constructor() { }
 
   ngOnInit() {
-    this.photo = this.mainPhoto;
+    this.photo = this.member.mainPhoto;
   }
 
   public changePhoto() {
-    this.photo = this.mainPhoto === this.photo ? this.hoverPhoto : this.mainPhoto;
+    this.photo = this.member.mainPhoto === this.photo ? this.member.hoverPhoto : this.member.mainPhoto;
   }
 
 }
